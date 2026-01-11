@@ -23,12 +23,29 @@ export default function Home() {
     <div style={{ maxWidth: "400px", margin: "50px auto" }}>
       <h2>{isRegister ? "Register" : "Login"}</h2>
       <form onSubmit={handleSubmit}>
-        <input type="email" placeholder="Email" value={email} onChange={e=>setEmail(e.target.value)} required />
-        <input type="password" placeholder="Password" value={password} onChange={e=>setPassword(e.target.value)} required />
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
         <button type="submit">{isRegister ? "Register" : "Login"}</button>
       </form>
-      <p style={{ marginTop:"10px", color:"blue", cursor:"pointer" }} onClick={()=>setIsRegister(!isRegister)}>
-        {isRegister ? "Already have an account? Login" : "Don't have an account? Register"}
+      <p
+        style={{ marginTop: "10px", color: "blue", cursor: "pointer" }}
+        onClick={() => setIsRegister(!isRegister)}
+      >
+        {isRegister
+          ? "Already have an account? Login"
+          : "Don't have an account? Register"}
       </p>
     </div>
   );
